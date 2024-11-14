@@ -1,5 +1,6 @@
 package com.gabrielscouto.dslist.controllers;
 
+import com.gabrielscouto.dslist.dto.GameMinDTO;
 import com.gabrielscouto.dslist.entities.Game;
 import com.gabrielscouto.dslist.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,8 @@ public class GameController {
     private GameService gameService;
 
     @GetMapping
-    public List<Game> findAll(){
-        List<Game> result = gameService.findAll();
+    public List<GameMinDTO> findAll(){
+        List<GameMinDTO> result = gameService.findAll();
         return result;
     }
 }
